@@ -20,3 +20,10 @@ body {
     color: rgb(40, 90, 90);
     text-align: center;
 }
+.footer{
+    position: absolute;
+    text-align: center;
+    top: 600px;
+    left: 580px;
+    z-index: 900;
+}

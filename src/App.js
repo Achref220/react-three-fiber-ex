@@ -2,7 +2,7 @@ import './App.scss';
 import { Canvas } from 'react-three-fiber';
 import SpinningMesh from './components/SpinningMesh';
 import { OrbitControls, softShadows } from '@react-three/drei';
-
+import * as BsGithub from 'react-icons/bs'
 
 softShadows();
 
@@ -15,9 +15,10 @@ function App() {
   return (
     <>
       <h1 className='title'>Three js with react example</h1>
+      <p className='footer'>© 2021 - 2022 React App By <a href='https://github.com/Achref220'><BsGithub.BsGithub /></a> ®</p>
       <Canvas
         shadows
-        camera={{ position: [-5, 2, 10], fov: 50 }}>
+        camera={{ position: [-3, 4, 10], fov: 50 }}>
         <ambientLight intensity={0.3} />
         <directionalLight
           castShadow
@@ -42,8 +43,9 @@ function App() {
           </mesh>
         </group>
         <SpinningMesh position={[0, 1, 0]} args={[3, 2, 1]} color='lightblue' speed={2}/>
-        <SpinningMesh position={[-2, 1, -4]} color='pink' speed={6}/>
+        <SpinningMesh position={[-2, 1, -4]} color='blue' speed={6}/>
         <SpinningMesh position={[4, 1, -2]} color='pink' speed={6} />
+        <SpinningMesh position={[-1, 1, 4]} color='green' speed={9} />
         <OrbitControls />
       </Canvas>
     </>
